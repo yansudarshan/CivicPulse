@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { SocketProvider } from './context/SocketContext';
 import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
 import { LoginPage } from './pages/auth/LoginPage';
 import { StaffLoginPage } from './pages/auth/StaffLoginPage';
 import { CitizenDashboard } from './pages/citizen/CitizenDashboard';
@@ -126,12 +127,7 @@ export const AppContent: React.FC = () => {
       </main>
 
       {/* Municipal Portal Footer */}
-      <footer className="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 space-y-1">
-          <p className="font-semibold text-slate-700">CivicPulse — Municipal Civic Operations Platform</p>
-          <p>Powered by Groq GPT-OSS, Sarvam AI & OpenStreetMap • Government of India Initiative</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
