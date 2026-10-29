@@ -63,7 +63,7 @@ export const TrackComplaintModal: React.FC<TrackComplaintModalProps> = ({
   const currentStageIndex = data?.incident?.status ? getStageIndex(data.incident.status) : 0;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-2xs flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[100] overflow-y-auto bg-slate-900/60 backdrop-blur-2xs flex items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">

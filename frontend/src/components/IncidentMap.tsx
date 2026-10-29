@@ -59,7 +59,7 @@ export const IncidentMap: React.FC<IncidentMapProps> = ({
   const defaultCenter: [number, number] = [12.9716, 77.5946];
 
   return (
-    <div className="h-[420px] w-full rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+    <div className="h-[420px] w-full rounded-xl overflow-hidden border border-slate-200 shadow-sm relative isolate z-0">
       <MapContainer
         center={defaultCenter}
         zoom={12}
@@ -125,7 +125,7 @@ export const IncidentMap: React.FC<IncidentMapProps> = ({
       </MapContainer>
 
       {/* Legend overlay */}
-      <div className="absolute bottom-3 right-3 z-[1000] bg-white/95 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-200 shadow-md text-xs space-y-1">
+      <div className="absolute bottom-3 right-3 z-10 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-200 shadow-md text-xs space-y-1">
         <p className="font-bold text-slate-700 text-[10px] uppercase tracking-wider">Priority Legend</p>
         <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-[11px]">
           <div className="flex items-center gap-1.5">

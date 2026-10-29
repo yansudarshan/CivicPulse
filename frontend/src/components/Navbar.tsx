@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Shield, PlusCircle, FileText, LogOut, LayoutDashboard, Wrench, Menu, X, User } from 'lucide-react';
+import { PlusCircle, FileText, LogOut, LayoutDashboard, Wrench, Menu, X, User } from 'lucide-react';
 import { NotificationBell } from './NotificationBell';
+import { GovernmentLogo } from './GovernmentLogo';
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
@@ -28,25 +29,10 @@ export const Navbar: React.FC = () => {
           {/* Logo & Portal Identity */}
           <Link
             to="/"
-            className="flex items-center space-x-3 group"
+            className="flex items-center group py-1"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 shadow-xs group-hover:bg-orange-100 transition-colors">
-              <Shield className="w-5 h-5 text-orange-600" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-orange-600 transition-colors">
-                  CivicPulse
-                </span>
-                <span className="text-[11px] px-2 py-0.5 bg-amber-50 text-amber-800 border border-amber-200/80 rounded-full font-semibold">
-                  Public Service
-                </span>
-              </div>
-              <p className="text-xs text-slate-500 hidden sm:block font-normal">
-                Municipal Issue Reporting &amp; Resolution
-              </p>
-            </div>
+            <GovernmentLogo size="md" />
           </Link>
 
           {/* Desktop Navigation & User Actions */}

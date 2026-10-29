@@ -3,8 +3,8 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { authApi } from '../../services/api';
 import { CivicHeroIllustration } from '../../components/CivicHeroIllustration';
+import { GovernmentEmblem } from '../../components/GovernmentEmblem';
 import {
-  Shield,
   ArrowRight,
   AlertCircle,
   CheckCircle,
@@ -240,16 +240,17 @@ export const LoginPage: React.FC = () => {
           {/* ======================================================== */}
           <div className="order-3 lg:order-2 lg:col-span-5 w-full">
             <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 sm:p-8 relative">
-              {/* Card Header with Small Saffron Shield Icon */}
-              <div className="flex items-center space-x-3 mb-5">
-                <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 shadow-xs shrink-0">
-                  <Shield className="w-6 h-6 text-orange-600" />
-                </div>
+              {/* Card Header with Official Government Civic Emblem */}
+              <div className="flex items-center space-x-3.5 mb-5 pb-4 border-b border-slate-100">
+                <GovernmentEmblem size="md" />
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">
+                  <div className="text-[10px] uppercase font-bold text-orange-700 tracking-wider">
+                    भारत सरकार • Official Portal
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 leading-tight">
                     Welcome, Citizen!
                   </h2>
-                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                  <p className="text-xs text-slate-500 mt-0.5">
                     Your voice matters. Sign in to make a difference.
                   </p>
                 </div>

@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { authApi, taxonomyApi } from '../../services/api';
 import { IDepartment } from '../../types';
+import { GovernmentEmblem } from '../../components/GovernmentEmblem';
 import {
   Building2,
   Wrench,
@@ -445,9 +446,10 @@ export const StaffLoginPage: React.FC = () => {
             <Link to="/login" className="hover:text-civic-navy">
               &larr; Citizen Login
             </Link>
-            <span className="text-[11px] text-slate-400">
-              CivicPulse Public Operations
-            </span>
+            <div className="flex items-center space-x-1.5 text-[11px] text-slate-500 font-semibold">
+              <GovernmentEmblem size="sm" />
+              <span>CivicPulse Gov Portal</span>
+            </div>
           </div>
         </div>
       </div>

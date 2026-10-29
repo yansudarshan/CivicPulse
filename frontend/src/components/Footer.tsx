@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Shield, X, HelpCircle, Info, Lock, Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
+import { X, HelpCircle, Info, Lock, Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
+import { GovernmentEmblem } from './GovernmentEmblem';
 
 type ModalType = 'about' | 'help' | 'privacy' | 'contact' | null;
 
@@ -18,13 +19,16 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Branding and Tagline */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-1">
-              <div className="flex items-center space-x-2">
-                <div className="w-6 h-6 rounded-md bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-600">
-                  <Shield className="w-3.5 h-3.5" />
+              <div className="flex items-center space-x-3">
+                <GovernmentEmblem size="sm" />
+                <div>
+                  <span className="text-[10px] font-bold text-orange-700 uppercase tracking-wider block leading-none mb-0.5">
+                    भारत सरकार • GOVT. OF INDIA
+                  </span>
+                  <span className="text-sm font-bold text-slate-900 tracking-tight">
+                    CivicPulse — Municipal Civic Operations Platform
+                  </span>
                 </div>
-                <span className="text-sm font-bold text-slate-900 tracking-tight">
-                  CivicPulse — Municipal Civic Operations Platform
-                </span>
               </div>
               <p className="text-xs text-slate-500">
                 CivicPulse — Your City. Your Voice. Our Responsibility.
@@ -78,7 +82,7 @@ export const Footer: React.FC = () => {
       {/* Information Modals */}
       {activeModal && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs transition-opacity"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs transition-opacity"
           onClick={closeModal}
         >
           <div
