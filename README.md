@@ -250,7 +250,3 @@ npm run build
 3. **Evidence Preservation**: Photos submitted by citizens and workers are permanently preserved in audit logs—even during rejection/rework cycles.
 4. **Coordinate Accuracy**: GeoJSON coordinates are strictly indexed and stored in `[longitude, latitude]` format as required by the WGS-84 standard.
 
----
-
-## 📜 License
-Government public-service initiative. Licensed under the MIT License.
